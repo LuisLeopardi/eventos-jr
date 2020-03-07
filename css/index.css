@@ -33,6 +33,11 @@ header nav {
 	z-index: 1000;
 }
 
+.logo {
+	width: 20%;
+	height: 100%;
+}
+
 .nav-link {
 	text-decoration: none;
 	color: #fff;
@@ -396,6 +401,9 @@ main {
 }
 
 @media (max-width: 616px) {
+	header nav {
+		height: 50px;
+	}
 	.nav-link {
 		font-size: 70%;
 	}
