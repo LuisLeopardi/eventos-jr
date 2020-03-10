@@ -289,15 +289,13 @@ main {
 	clip-path: polygon(0 0, 100% 0, 77% 78%, 0 100%);
 }
 
-.dance {
+.dj {
 	position: absolute;
 	top: -400px;
 	right: 0;
 	width: 600px;
 	height: 450px;
 	z-index: 2;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 27%);
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 27%);
 }
 
 .candle {
@@ -307,8 +305,6 @@ main {
 	width: 800px;
 	height: 500px;
 	z-index: 2;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 23%, 0 88%);
-	clip-path: polygon(0 0, 100% 0, 100% 23%, 0 88%);
 }
 
 .line {
