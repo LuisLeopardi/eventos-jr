@@ -33,9 +33,15 @@ header nav {
 	z-index: 1000;
 }
 
-.logo {
+.start-link {
 	width: 20%;
 	height: 100%;
+	min-width: 100px;
+}
+
+.logo {
+	width: 98%;
+	height: 98%;
 }
 
 .nav-link {

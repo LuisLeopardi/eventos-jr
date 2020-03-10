@@ -22,7 +22,7 @@ const indexScriptJr = () => {
 			const green = 'rgba(54, 255, 70, 0.5)';
 			const blue = 'rgba(0, 140, 255, 0.5)';
 			const colorsArray = [red, purple, green, blue];
-			const randomColor =Math.floor(Math.random() * colorsArray.length);
+			const randomColor = Math.floor(Math.random() * colorsArray.length);
 			let color = colorsArray[randomColor];
 			return blue;
 		}
