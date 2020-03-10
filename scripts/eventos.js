@@ -42,29 +42,28 @@ const eventosJr = () => {
 	const personalList = document.getElementById('personal-list');
 	//---------------------------------------------------------------------------functions
 
-	const display = () => {
+	const display = (packageName) => {
+
 		paquetes.style.display = 'none';
 		final.style.display = 'flex';
 
-		if (value==='quinceañera people150 gold'){
-			finalHeadline.innerHTML = listado.quinceAñosGold.title;
+		finalHeadline.innerHTML = listado[packageName].title;
 
-			personalList.innerHTML = '<h2> personal </h2>' + 
-			listado.quinceAñosGold.personal.map(item=>{
-				return `<p> ${item} </p>`
-			}).join('');
+		personalList.innerHTML = '<h2> personal </h2>' + 
+		listado[packageName].personal.map(item=>{
+			return `<p> ${item} </p>`
+		}).join('');
 
-			foodList.innerHTML = '<h2> Comida </h2>' + 
-			listado.quinceAñosGold.comida.map(item=>{
-				return `<p> ${item} </p>`
-			}).join('');
+		foodList.innerHTML = '<h2> Comida </h2>' + 
+		listado[packageName].comida.map(item=>{
+			return `<p> ${item} </p>`
+		}).join('');
 
-			decorationList.innerHTML = '<h2> Decoración </h2>' + 
-			listado.quinceAñosGold.decoracion.map(item=>{
-				return `<p> ${item} </p>`
-			}).join('');
-
-		}
+		decorationList.innerHTML = '<h2> Decoración </h2>' + 
+		listado[packageName].decoracion.map(item=>{
+			return `<p> ${item} </p>`
+		}).join('');
+		
 	}
 
 	class ListFunction {
@@ -105,7 +104,7 @@ const eventosJr = () => {
 				paquetes.style.display = 'none';
 				final.style.display = 'flex';
 				value += ' ' + this.variable.id;
-				display();
+				display(value.replace(/\s+/g, ''));
 			})
 		}
 
@@ -149,7 +148,7 @@ const eventosJr = () => {
 }
 
 const listado = {
-	quinceAñosGold: {
+	quinceañerapeople150gold: {
 	title:'Paquete oro para quinceañera de 150 personas',
 	decoracion : [
 		'1 mesa principal decorada',

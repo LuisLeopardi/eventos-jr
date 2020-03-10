@@ -16,22 +16,13 @@ const indexScriptJr = () => {
 			this.dy = dy;
 		}
 
-		colorStyle(){
-			const red = 'rgba(255, 69, 69, 0.5)';
-			const purple = 'rgba(128, 69, 255,0.5)';
-			const green = 'rgba(54, 255, 70, 0.5)';
-			const blue = 'rgba(0, 140, 255, 0.5)';
-			const colorsArray = [red, purple, green, blue];
-			const randomColor = Math.floor(Math.random() * colorsArray.length);
-			let color = colorsArray[randomColor];
-			return blue;
-		}
-
 			draw() {
 
 				c.beginPath();
 				c.arc(this.x,this.y,this.radius,0,Math.PI * 2, false);
 				c.fillStyle = this.color;
+				c.shadowBlur = 15;
+				c.shadowColor = this.color;
 				c.fill();
 			} 
 
@@ -55,12 +46,12 @@ const indexScriptJr = () => {
 	
 
 	circleArray = [];
-	const red = '#ba0000';
-	const orange = '#ff4229';
-	const blue = '#152a3f';
+	const red = '#ff3700';
+	const orange = '#0055ff';
+	const blue = '#fff';
 	const colorsArray = [red, orange, blue];
 
-	for (var i = 0 - 1; i < 100; i++) {
+	for (var i = 0 - 1; i < 50; i++) {
 
 		let randomColor =Math.floor(Math.random() * colorsArray.length);
 		let color = colorsArray[randomColor];
