@@ -1,5 +1,10 @@
 const eventosJr = () => {
 
+	const line1 = document.getElementById('line1');
+	const line2 = document.getElementById('line2');
+	const line3 = document.getElementById('line3');
+	const nav = document.getElementById('mobile-nav');
+	const burger = document.getElementById('burger')
 	const button = document.getElementById('back');
 
 	let value = '';
@@ -142,7 +147,25 @@ const eventosJr = () => {
 		final.style.display = 'none';
 		back.style.display = 'none';
 		value = '';
-	})
+	});
+
+	burger.addEventListener('click', ()=>{
+		if (nav.style.transform === 'translateX(0%)') {
+			nav.style.transform = 'translateX(100%)';
+			line1.style.margin = '5px 0 5px 0';
+			line1.style.transform = 'rotate(0deg)';
+			line2.style.display = 'block';
+			line3.style.margin = '5px 0 5px 0';
+			line3.style.transform = 'rotate(0deg)';
+		} else {
+			nav.style.transform = 'translateX(0%)';
+			line1.style.transform = 'rotate(45deg)';
+			line1.style.margin = '0';
+			line2.style.display = 'none';
+			line3.style.transform = 'rotate(-45deg)';
+			line3.style.margin = '0';
+		}
+	});
 
 
 }

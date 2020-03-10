@@ -1,4 +1,10 @@
-const indexScriptJr = () => {
+const indexScriptJr = () => {	
+	const line1 = document.getElementById('line1');
+	const line2 = document.getElementById('line2');
+	const line3 = document.getElementById('line3');
+	const nav = document.getElementById('mobile-nav');
+	const title = document.getElementById('title');
+	const burger = document.getElementById('burger')
 	const canvas = document.getElementById('canvas');
 	const c = canvas.getContext('2d');
 	const innerWidth = window.innerWidth;
@@ -74,6 +80,26 @@ const indexScriptJr = () => {
 	}
 
 	animate();
+
+	burger.addEventListener('click', ()=>{
+		if (nav.style.transform === 'translateX(0%)') {
+			nav.style.transform = 'translateX(100%)';
+			title.style.opacity = '1';	
+			line1.style.margin = '5px 0 5px 0';
+			line1.style.transform = 'rotate(0deg)';
+			line2.style.display = 'block';
+			line3.style.margin = '5px 0 5px 0';
+			line3.style.transform = 'rotate(0deg)';
+		} else {
+			nav.style.transform = 'translateX(0%)';
+			title.style.opacity = '0';
+			line1.style.transform = 'rotate(45deg)';
+			line1.style.margin = '0';
+			line2.style.display = 'none';
+			line3.style.transform = 'rotate(-45deg)';
+			line3.style.margin = '0';
+		}
+	});
 
 }
 indexScriptJr()
